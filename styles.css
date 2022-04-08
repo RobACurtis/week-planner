@@ -101,6 +101,14 @@
   justify-content: space-between;
 }
 
+td {
+  border-right: 1px solid black;
+}
+
 table {
-  border: 1px solid black;
+  width: 80%;
+}
+
+tr:nth-child(odd) {
+  background-color: grey;
 }

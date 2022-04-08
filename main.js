@@ -1,3 +1,4 @@
+
 var $addEntry = document.querySelector('.button-1');
 var $popup = document.querySelector('.popup');
 var $overlay = document.querySelector('.overlay');
