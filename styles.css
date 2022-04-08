@@ -29,9 +29,10 @@
 }
 
 .popup {
-  position: absolute;
+  position: fixed;
   border: 1px solid black;
   width: 400px;
+  background-color: white;
 }
 
 .hidden {
@@ -56,6 +57,7 @@
 }
 
 .margin-popup {
+  margin-top: 25%;
   padding: 10px 30px;
 }
 
@@ -73,6 +75,14 @@
 }
 
 .overlay {
+  opacity: 0;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.overlay-on {
   position: fixed;
   opacity: 1;
   top: 0;
@@ -83,5 +93,5 @@
 }
 
 .z-index {
-  z-index: 1;
+  z-index: 10;
 }
