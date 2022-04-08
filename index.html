@@ -35,30 +35,62 @@
     </div>
     <div class="row">
       <div class="column-full">
-        <h2>Scheduled Events for <span>Sunday</span></h2>
+        <h2 class="center">Scheduled Events for <span>&nbsp;Sunday</span></h2>
         <table>
           <thead>
-            <tr class="time">
+            <tr>
               <th>Time</th>
+              <th>Description</th>
             </tr>
           </thead>
-          <tbody>
-            <tr class="time">
-              <td class="time">9</td>
-              <td class="description">Eating Lunch</td>
-            </tr>
-
+          <tbody class="time-table">
             <tr>
-              <td>10:00</td>
-              <td>Eating Lunch</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
             </tr>
-            <tr></tr>
-            <tr></tr>
-            <tr></tr>
-            <tr></tr>
-            <tr></tr>
-            <tr></tr>
-            <tr></tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td>&nbsp;</td>
+              <td>&nbsp;</td>
+            </tr>
+            <tr>
+              <td></td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -71,57 +103,59 @@
           <div class="popup margin-popup hidden">
             <div class="pop-up-header center">
               <div class="column-full">
-                <h2 class="margin-none">Add Entry</hs2>
+                <h2 class="margin-none">Add Entry</h2>
               </div>
             </div>
             <div class="column-full">
-              <div class="popup-body flex-start">
-                <select class="select-margin" name="day-of-week" id="day-of-week">
-                  <option value="">Days of Week</option>
-                  <option value="sunday">Sunday</option>
-                  <option value="monday">Monday</option>
-                  <option value="tuesday">Tuesday</option>
-                  <option value="wendsday">Wendsday</option>
-                  <option value="thursday">Thursday</option>
-                  <option value="friday">Friday</option>
-                  <option value="saturday">Saturday</option>
-                </select>
-                <select class="select-margin" name="time" id="time">
-                  <option value="">Time</option>
-                  <option value="0">00:00</option>
-                  <option value="1">01:00</option>
-                  <option value="2">02:00</option>
-                  <option value="3">03:00</option>
-                  <option value="4">04:00</option>
-                  <option value="5">05:00</option>
-                  <option value="6">06:00</option>
-                  <option value="7">07:00</option>
-                  <option value="8">08:00</option>
-                  <option value="9">09:00</option>
-                  <option value="10">10:00</option>
-                  <option value="11">11:00</option>
-                  <option value="12">12:00</option>
-                  <option value="13">13:00</option>
-                  <option value="14">14:00</option>
-                  <option value="15">15:00</option>
-                  <option value="16">16:00</option>
-                  <option value="17">17:00</option>
-                  <option value="18">18:00</option>
-                  <option value="19">19:00</option>
-                  <option value="20">20:00</option>
-                  <option value="21">21:00</option>
-                  <option value="22">22:00</option>
-                  <option value="23">23:00</option>
-                  <option value="24">24:00</option>
-                </select>
+              <form>
+                <div class="popup-body flex-start">
+                  <select class="select-margin" name="day-of-week" id="day-of-week">
+                    <option value="">Days of Week</option>
+                    <option value="sunday">Sunday</option>
+                    <option value="monday">Monday</option>
+                    <option value="tuesday">Tuesday</option>
+                    <option value="wendsday">Wendsday</option>
+                    <option value="thursday">Thursday</option>
+                    <option value="friday">Friday</option>
+                    <option value="saturday">Saturday</option>
+                  </select>
+                  <select class="select-margin" name="time" id="time">
+                    <option value="">Time</option>
+                    <option value="0">00:00</option>
+                    <option value="1">01:00</option>
+                    <option value="2">02:00</option>
+                    <option value="3">03:00</option>
+                    <option value="4">04:00</option>
+                    <option value="5">05:00</option>
+                    <option value="6">06:00</option>
+                    <option value="7">07:00</option>
+                    <option value="8">08:00</option>
+                    <option value="9">09:00</option>
+                    <option value="10">10:00</option>
+                    <option value="11">11:00</option>
+                    <option value="12">12:00</option>
+                    <option value="13">13:00</option>
+                    <option value="14">14:00</option>
+                    <option value="15">15:00</option>
+                    <option value="16">16:00</option>
+                    <option value="17">17:00</option>
+                    <option value="18">18:00</option>
+                    <option value="19">19:00</option>
+                    <option value="20">20:00</option>
+                    <option value="21">21:00</option>
+                    <option value="22">22:00</option>
+                    <option value="23">23:00</option>
+                    <option value="24">24:00</option>
+                  </select>
+                </div>
               </div>
-            </div>
-            <div class="column-full center">
-              <textarea class="text-area" name="description" id="description" placeholder="Description"></textarea>
-            </div>
-            <div class="column-full flex-end">
-              <button class="select-margin" type="submit">Submit</button>
-            </div>
+              <div class="column-full center">
+                <textarea class="text-area" name="description" id="description" placeholder="Description"></textarea>
+              </div>
+              <div class="column-full flex-end">
+                <button class="select-margin" type="submit" id="submit">Submit</button>
+              </div>
+            </form>
           </div>
         </div>
       </div>

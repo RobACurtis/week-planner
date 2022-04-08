@@ -101,14 +101,28 @@
   justify-content: space-between;
 }
 
+th,
 td {
-  border-right: 1px solid black;
+  border-right: 2px solid black;
+  border-collapse: collapse;
+  margin: 0;
 }
 
 table {
-  width: 80%;
+  width: 100%;
+  border: 2px solid black;
+  border-collapse: collapse;
+  empty-cells: show;
 }
 
 tr:nth-child(odd) {
-  background-color: grey;
+  background-color: #ccc;
+}
+
+th {
+  background-color: bisque;
+}
+
+.tbody {
+  text-align: left;
 }
