@@ -25,7 +25,7 @@
 
     <div class="row">
       <div class="column-full center">
-        <div class="popup margin-popup">
+        <div class="popup margin-popup hidden">
           <div class="pop-up-header center">
             <div class="column-full">
               <h2 class="margin-none">Add Entry</h2>
@@ -33,7 +33,7 @@
           </div>
           <div class="column-full">
             <div class="popup-body flex-start">
-              <select name="day-of-week" id="day-of-week">
+              <select class="select-margin" name="day-of-week" id="day-of-week">
                 <option value="">Days of Week</option>
                 <option value="sunday">Sunday</option>
                 <option value="monday">Monday</option>
@@ -43,7 +43,7 @@
                 <option value="friday">Friday</option>
                 <option value="saturday">Saturday</option>
               </select>
-              <select name="time" id="time">
+              <select class="select-margin" name="time" id="time">
                 <option value="">Time</option>
                 <option value="0">00:00</option>
                 <option value="1">01:00</option>
@@ -74,15 +74,16 @@
             </div>
           </div>
           <div class="column-full center">
-            <textarea class="text-area" name="description" id="description"></textarea>
+            <textarea class="text-area" name="description" id="description" placeholder="Description"></textarea>
           </div>
           <div class="column-full flex-end">
-            <button type="submit">Submit</button>
+            <button class="select-margin" type="submit">Submit</button>
           </div>
         </div>
       </div>
     </div>
   </div>
+  <div class="overlay"></div>
   <script src="main.js"></script>
 </body>
 
