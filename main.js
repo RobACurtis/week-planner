@@ -7,6 +7,8 @@ var $form = document.querySelector('form');
 var $day = document.querySelector('#day-of-week');
 var $time = document.querySelector('#time');
 var $description = document.querySelector('#description');
+var $tableTime = document.querySelector('.thyme');
+var $tableDescription = document.querySelector('.descriptionTable');
 
 $addEntry.addEventListener('click', openPopup);
 $form.addEventListener('submit', submitForm);
@@ -28,7 +30,13 @@ function submitForm(event) {
   storage.id = data.nextEntryId;
   data.nextEntryId++;
   data.entries.push(storage);
-  console.log(data.entries);
+  entries(storage);
+}
+
+function entries(obj) {
+  $tableTime.textContent = obj.time;
+  $tableDescription.textContent = obj.description;
+
 }
 
 var data = {
