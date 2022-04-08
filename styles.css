@@ -95,3 +95,12 @@
 .z-index {
   z-index: 10;
 }
+
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
+table {
+  border: 1px solid black;
+}
