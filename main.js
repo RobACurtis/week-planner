@@ -9,9 +9,13 @@ var $time = document.querySelector('#time');
 var $description = document.querySelector('#description');
 var $tableTime = document.querySelector('.thyme');
 var $tableDescription = document.querySelector('.descriptionTable');
+var $buttonDays = document.querySelector('.buttonDiv');
+var $sunday = document.querySelector('.sunday');
+var $phDay = document.querySelector('.placeholder-day');
 
 $addEntry.addEventListener('click', openPopup);
 $form.addEventListener('submit', submitForm);
+$buttonDays.addEventListener('click', changeDay);
 
 function openPopup(event) {
   $popup.className = 'popup margin-popup z-index';
@@ -31,6 +35,13 @@ function submitForm(event) {
   data.nextEntryId++;
   data.entries.push(storage);
   entries(storage);
+}
+
+function changeDay(event) {
+  console.log(event.target);
+  if (event.target && event.target.matches('button')) {
+    $phDay.textContent = event.target.textContent;
+  }
 }
 
 function entries(obj) {
