@@ -12,6 +12,7 @@ var $tableDescription = document.querySelector('.descriptionTable');
 var $buttonDays = document.querySelector('.buttonDiv');
 var $sunday = document.querySelector('.sunday');
 var $phDay = document.querySelector('.placeholder-day');
+var $td = document.querySelectorAll('td');
 
 $addEntry.addEventListener('click', openPopup);
 $form.addEventListener('submit', submitForm);
@@ -45,9 +46,10 @@ function changeDay(event) {
 }
 
 function entries(obj) {
-  $tableTime.textContent = obj.time;
-  $tableDescription.textContent = obj.description;
-
+  for (var i = 0; i < $td.length; i++) {
+    $tableTime.textContent = obj.time;
+    $tableDescription.textContent = obj.description;
+  }
 }
 
 var data = {
@@ -69,3 +71,27 @@ function beforeCall(event) {
 }
 
 window.addEventListener('beforeunload', beforeCall);
+
+function domLoad(event) {
+  for (var i = 0; i < data.entries.length; i++) {
+    theUL.prepend(data.entries[i]);
+  }
+}
+
+window.addEventListener('DOMContentLoaded', domLoad);
+
+function createTable(obj) {
+  var tBody = document.createElement('tbody');
+  tBody.className = 'time-table';
+  var tRow = document.createElement('tr');
+  tBody.appendChild(tRow);
+  var tDataTime = document.createElement('td');
+  tDataTime.className = 'thyme';
+  tRow.appendChild(tDataTime);
+  var tDataDes = document.createElement('td');
+  tDataDes.className = 'descriptionTable';
+  tRow.appendChild(tDataDes);
+  tBody.appendChild(tRow);
+  tBody.appendChild(tRow);
+  tBody.appendChild(tRow);
+}
